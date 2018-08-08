@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Catch of the Day</title>
+    <link rel="manifest" href="../manifest.json" />
   </head>
   <body>
     <input type="checkbox" id="fold">
@@ -24,6 +25,14 @@
         messagingSenderId: "1014586694191"
       };
       firebase.initializeApp(config);
+    </script>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function() {
+            console.log('Service Worker Registered');
+          });
+      }
     </script>
   </body>
 </html>
