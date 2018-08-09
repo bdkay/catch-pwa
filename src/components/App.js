@@ -14,7 +14,7 @@ class App extends React.Component {
     this.loadSamples = this.loadSamples.bind(this);
     this.addToOrder = this.addToOrder.bind(this);
 
-    // getinitialState
+    // get initial State
     this.state = {
       fishes: {},
       order: {}
